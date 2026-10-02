@@ -123,7 +123,7 @@
       <span class="mono" style="color:var(--mute-d)">VOLTR Programs &middot; all three</span>
       <div class="price">&euro;79<small> once</small></div>
       <p class="terms">Athletic Strength, Hybrid and 3-Day Minimum. 24 weeks of training. Instant access after payment, yours to keep.</p>
-      <div class="btnrow"><a class="btn light" id="checkout" href="PLANS_CHECKOUT_URL">Get all three programs <span class="arr">&rarr;</span></a></div>
+      <div class="btnrow"><a class="btn light" id="checkout" href="mailto:training@voltr.at?subject=VOLTR%20Programs" data-checkout>Get all three programs <span class="arr">&rarr;</span></a></div>
       <div class="micro">Secure checkout by Stripe &middot; card, Apple Pay, Google Pay</div>
     </div>
     <ul class="incl">
@@ -180,6 +180,8 @@
 </div></footer>
 
 <div class="mcta"><a class="btn" href="#buy">Get all three &middot; &euro;79 <span class="arr">&rarr;</span></a></div>
+<script src="/assets/checkout.js"></script>
+<script>if(window.VOLTR_CHECKOUT){document.querySelectorAll("[data-checkout]").forEach(function(a){a.href=window.VOLTR_CHECKOUT})}</script>
 <script src="/assets/site.js"></script>
 </body>
 </html>
