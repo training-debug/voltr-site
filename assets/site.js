@@ -19,14 +19,26 @@
     document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
   } else {document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
 
+
+  // v5: hero intro (line rise), stagger, count-up
+  var hh=document.querySelector('.hero .display');
+  if(hh&&!hh.querySelector('.ln')){hh.innerHTML=hh.innerHTML.split(/<br\s*\/?>/i).map(function(x,i){return '<span class="ln"><span style="transition-delay:'+(0.15+i*0.12)+'s">'+x+'</span></span>'}).join('')}
+  var hr=document.querySelector('.hero');if(hr){requestAnimationFrame(function(){setTimeout(function(){hr.classList.add('go')},60)})}
+  var groups=new Map();document.querySelectorAll('.rv').forEach(function(el){var p=el.parentNode;var n=groups.get(p)||0;if(n)el.style.transitionDelay=Math.min(n,4)*0.09+'s';groups.set(p,n+1)});
+  if('IntersectionObserver' in window){
+    var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,n=el.firstChild;if(!n||n.nodeType!==3)return;var m=n.nodeValue.match(/^(\D*)(\d+)$/);if(!m)return;var end=+m[2],t0=null;function f(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/1100,1);k=1-Math.pow(1-k,3);n.nodeValue=m[1]+Math.round(end*k);if(k<1)requestAnimationFrame(f)}n.nodeValue=m[1]+'0';requestAnimationFrame(f)})},{threshold:.6});
+    document.querySelectorAll('.tframe .empty .big').forEach(function(el){co.observe(el)});
+  }
+
   // mobile nav
   var bg=document.querySelector('.burger'),mn=document.querySelector('.mnav');
   if(bg&&mn){bg.addEventListener('click',function(){mn.classList.add('open')});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open')})});}
 
   // transformation frames: show typographic card until photos exist
-  document.querySelectorAll('.tframe img').forEach(function(img){
-    function fail(){img.closest('.tframe').classList.add('noimg')}
-    if(img.complete&&img.naturalWidth===0){fail()} else {img.addEventListener('error',fail)}
+  document.querySelectorAll('.tframe').forEach(function(fr){
+    fr.classList.add('noimg');var imgs=fr.querySelectorAll('img'),ok=0;
+    imgs.forEach(function(img){img.loading='eager';function good(){if(img.naturalWidth>0&&++ok===imgs.length)fr.classList.remove('noimg')}
+      if(img.complete)good();else img.addEventListener('load',good)});
   });
 
   // hero video: swap to portrait source on small screens

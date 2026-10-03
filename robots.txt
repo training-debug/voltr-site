@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /programs/access-476a07b27d/
+Allow: /
 Sitemap: https://voltr.at/sitemap.xml
-
