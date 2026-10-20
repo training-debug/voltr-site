@@ -299,6 +299,49 @@ footer a{margin-right:22px;text-decoration:none}
 .mirror{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .sub-h{margin:72px 0 22px}
 @media(max-width:900px){.mirror{grid-template-columns:1fr;gap:32px}.pairs2,.qgrid,.pains{grid-template-columns:1fr}.nutri.solo .nutri-txt{padding:28px 22px}}
+/* v5 (20.10.): leichter und luftiger, Wunsch Lukas */
+h1,h2,h3{font-weight:500}
+h2 span,h1 span{font-weight:300}
+h3{font-weight:500}
+.verdict,.tcard .big,.amt,.hstep .n,.reasons .n,.pmini .cap b{font-weight:500}
+body{line-height:1.7}
+.lead{line-height:1.65}
+.head{margin-bottom:60px}
+.head .lead{margin-top:24px}
+.pain,.step,.hstep,.qgrid .glass{padding:30px 30px 32px}
+.pains,.steps,.qgrid,.hsteps,.results{gap:16px}
+.week{gap:12px}
+.cta-row{margin-top:52px}
+@media(max-width:900px){
+ section{padding:104px 0}
+ .wrap{padding:0 24px}
+ h1{font-size:34px;line-height:1.1}
+ h2{font-size:28px;line-height:1.18}
+ h3{font-size:19px}
+ .lead{font-size:16.5px}
+ .head{margin-bottom:44px}
+ .hero .wrap{padding-bottom:72px}
+ .hero .lead{margin-top:20px}
+ .chips{margin-top:28px;gap:8px}
+ .chip{font-size:13px}
+ .week{gap:10px}
+ .day{padding:18px 20px}
+ .day p{font-size:15px;line-height:1.55}
+ .pains,.steps,.qgrid,.hsteps,.results{gap:14px}
+ .pain,.step,.hstep,.qgrid .glass{padding:26px 22px 28px}
+ .reasons li{padding:26px 0}
+ .verdict{font-size:22px;line-height:1.3;margin-top:40px}
+ .after-week{font-size:20px;line-height:1.45;margin-top:40px}
+ .pains-head{margin:88px 0 26px}
+ .sub-h{margin:84px 0 24px}
+ .items li{padding:18px 0}
+ .amt{font-size:60px}
+ .offer-l h3{font-size:28px}
+ .cta-row{margin-top:44px}
+ details{padding:24px 0}
+ summary{font-size:17px}
+ .compare th,.compare td{padding:16px 12px}
+}
 </style>
 </head>
 <body>
@@ -335,9 +378,9 @@ footer a{margin-right:22px;text-decoration:none}
    <div class="day glass hl"><span class="d">DI</span><p>Der Termin um 17 Uhr dauert bis 19:30. Das Training rutscht auf morgen.</p></div>
    <div class="day glass hl"><span class="d">MI</span><p>Morgen ist schon voll. Mittag am Schreibtisch, gegessen wird, was gerade da ist.</p></div>
    <div class="day glass hl"><span class="d">DO</span><p>Kurzfristig unterwegs. Hotel, Kundentermin, Abendessen. Der Plan passt nicht mehr zur Woche.</p></div>
-   <div class="day glass"><span class="d">FR</span><p>Geschäftsessen. Die Woche gilt innerlich als gelaufen.</p></div>
+   <div class="day glass"><span class="d">FR</span><p>Geschäftsessen. Ab jetzt zählt die Woche eh nicht mehr.</p></div>
    <div class="day glass"><span class="d">SA</span><p>Alles nachholen. Zwei Einheiten an einem Tag, hoher Einsatz, wenig Erholung.</p></div>
-   <div class="day glass"><span class="d">SO</span><p>Die Waage zeigt dasselbe wie letzte Woche. Am Abend entsteht der nächste perfekte Plan.</p></div>
+   <div class="day glass"><span class="d">SO</span><p>Die Waage zeigt dasselbe wie letzte Woche. Am Abend schreibst du den nächsten Plan.</p></div>
   </div>
   <p class="after-week"><b>Du triffst den ganzen Tag Entscheidungen.</b> Für dein eigenes Ziel bleibt das, was von der Woche übrig ist.</p>
 
@@ -348,7 +391,7 @@ footer a{margin-right:22px;text-decoration:none}
    <div class="pain glass"><h3>Der Kalender gewinnt</h3><p>Sobald die Woche voll wird, fallen Training und gute Gewohnheiten als Erstes weg.</p></div>
    <div class="pain glass"><h3>Viel Wissen, keine Entscheidung</h3><p>Kalorien, Protein, Fasten. Du weißt viel, aber nicht, was davon für dich gerade zählt.</p></div>
   </div>
-  <div class="cta-row"><a class="btn cta" data-pos="pains" href="#bewerbung">Ja, das bin ich <i>→</i></a></div>
+  <div class="cta-row"><a class="btn" href="#coach">Mehr über mich <i>→</i></a></div>
  </div>
 </section>
 
@@ -357,13 +400,13 @@ footer a{margin-right:22px;text-decoration:none}
   <div class="split-img"><img src="img/curl.jpg" alt="Lukas Plassnig beim Krafttraining" loading="lazy"></div>
   <div>
    <span class="label">Warum es bisher nicht funktioniert hat</span>
-   <h2 style="margin-top:20px">Am Willen hat es nie gelegen.</h2>
+   <h2 style="margin-top:20px">An deinem Willen liegt es nicht.</h2>
    <ul class="reasons">
     <li><span class="n">01</span><div><h3>Dein Plan rechnet mit einer Woche, die du nicht hast.</h3><p>Freie Abende, acht Stunden Schlaf, eine eigene Küche. Ein Termin, eine Reise, und er bricht.</p></div></li>
     <li><span class="n">02</span><div><h3>Du machst zu viel vom Falschen.</h3><p>Härter trainieren, weniger essen, das nächste Programm. Der Aufwand steigt, die Waage geht nicht mit.</p></div></li>
     <li><span class="n">03</span><div><h3>Niemand entscheidet.</h3><p>Wann anpassen, was weg kann, was bleibt. Du rätst jede Woche neu und weißt nach drei Monaten nicht, ob es funktioniert hat.</p></div></li>
    </ul>
-   <p class="verdict">Kein Disziplinproblem. <span>Ein Entscheidungsproblem.</span></p>
+   <p class="verdict">Dir fehlt nicht die Disziplin. <span>Dir fehlt jemand, der jede Woche mit dir entscheidet.</span></p>
    <p style="margin-top:18px;color:var(--dim);font-size:17px;max-width:540px">Beruflich steuerst du genau durch solche Wochen. Dein Training ist nur noch nicht auf diese Realität ausgelegt.</p>
   </div>
  </div>
@@ -377,7 +420,7 @@ footer a{margin-right:22px;text-decoration:none}
   </div>
   <div>
    <span class="label">Der Unterschied</span>
-   <h2 style="margin-top:20px">Du brauchst keinen perfekten Plan für eine perfekte Woche. <span>Du brauchst ein System, das auch in einer normalen Woche funktioniert.</span></h2>
+   <h2 style="margin-top:20px">Deine Woche wird nicht ruhiger. <span>Also muss der Plan zu der Woche passen, die du wirklich hast.</span></h2>
   </div>
  </div>
 </section>
@@ -387,13 +430,13 @@ footer a{margin-right:22px;text-decoration:none}
  <div class="wrap">
   <div class="head">
    <span class="label">So arbeiten wir</span>
-   <h2>Kein besserer Plan. <span>Ein Coaching, das sich deiner Woche anpasst.</span></h2>
+   <h2>So arbeiten wir. <span>Jede Woche angepasst an das, was bei dir wirklich los ist.</span></h2>
   </div>
   <div class="steps">
    <div class="step glass"><span class="n">1</span><h3>Wo du stehst</h3><p>Startgespräch: Ausgangslage, was dein Alltag zulässt, ein messbares Ziel mit Datum. Schriftlich.</p></div>
    <div class="step glass"><span class="n">2</span><h3>Ein Plan für deine echte Woche</h3><p>Training für die Tage, die du wirklich hast. Reisen, Hotelgyms und späte Meetings werden eingeplant, sobald du sie kennst.</p></div>
    <div class="step glass"><span class="n">3</span><h3>Jede Woche eine Entscheidung</h3><p>Du machst deinen Check-in, ich lese ihn und passe die nächste Woche an. Mit einer kurzen Notiz, was sich ändert und warum.</p></div>
-   <div class="step glass"><span class="n">4</span><h3>Ein Ziel, kein Gefühl</h3><p>Jede Anpassung richtet sich an deinem Ziel aus. Du weißt, worauf du hinarbeitest und bis wann.</p></div>
+   <div class="step glass"><span class="n">4</span><h3>Ein Ziel mit Datum</h3><p>Jede Anpassung richtet sich an deinem Ziel aus. Du weißt, worauf du hinarbeitest und bis wann.</p></div>
   </div>
     <div class="nutri solo glass">
    <div class="nutri-txt">
@@ -421,7 +464,7 @@ footer a{margin-right:22px;text-decoration:none}
   <div class="head">
    <span class="label">Vorher und nachher</span>
    <h2>Echte Fotos. <span>Veröffentlicht mit Einverständnis.</span></h2>
-   <p class="lead">Kein Versprechen, sondern ein Blick darauf, wie Arbeit in normalen Wochen aussieht.</p>
+   <p class="lead">Echte Verläufe, mit Arbeit und Alltag dazwischen.</p>
   </div>
     <div class="case">
    <div class="case-track" id="caseTrack" tabindex="0" aria-label="Fallbeispiel, neun Slides">
@@ -464,13 +507,13 @@ footer a{margin-right:22px;text-decoration:none}
  </div>
 </section>
 
-<section class="navy-rev">
+<section id="coach" class="navy-rev">
  <div class="wrap split coach">
   <div>
    <span class="label">Dein Coach</span>
    <h2 style="margin-top:20px">Lukas Plassnig. <span>Ich entscheide mit dir, jede Woche.</span></h2>
    <p>Ich bin staatlich geprüfter Trainer und coache seit drei Jahren professionell, über hundert Menschen bisher. Ich arbeite mit Menschen, deren Woche selten so läuft wie geplant.</p>
-   <p><strong>Mein Job ist nicht, dich zu motivieren.</strong> Mein Job ist, aus deinem Alltag den Plan zu machen, der funktioniert, und jede Woche zu entscheiden, was er braucht und was weg kann.</p>
+   <p><strong>Motivieren ist nicht meine Aufgabe.</strong> Ich mache aus deinem Alltag einen Plan, der hält, und entscheide mit dir jede Woche, was er braucht und was weg kann.</p>
    <div class="facts"><span class="chip"><b>100+</b> Menschen betreut</span><span class="chip"><b>3</b> Jahre professionell</span><span class="chip">Antwort in 24 bis 48 h</span></div>
   </div>
   <div class="split-img"><img src="img/coach-stand.jpg" alt="Lukas Plassnig im Gym" loading="lazy"><span class="chip">Vienna · New York · Remote</span></div>
@@ -482,7 +525,7 @@ footer a{margin-right:22px;text-decoration:none}
  <div class="wrap">
   <div class="head center">
    <span class="label">Das Angebot</span>
-   <h2>Zwölf Wochen. <span>Ein Ziel. Jede Woche eine Entscheidung.</span></h2>
+   <h2>Zwölf Wochen. <span>Ein Ziel mit Datum.</span></h2>
   </div>
   <div class="offer">
    <div class="offer-l">
@@ -499,7 +542,7 @@ footer a{margin-right:22px;text-decoration:none}
    </div>
    <div class="offer-r">
     <div>
-     <span class="label">Investition</span>
+     <span class="label">Preis</span>
      <div class="amt">250 €<small>pro Monat</small></div>
      <ul class="terms">
       <li>Laufzeit<span>mindestens 3 Monate</span></li>
@@ -524,9 +567,9 @@ footer a{margin-right:22px;text-decoration:none}
   <div class="split-img"><img src="img/track-dsc03208.jpg" alt="Lukas Plassnig auf der Laufbahn" loading="lazy"></div>
   <div>
    <span class="label">So startest du</span>
-   <h2 style="margin-top:20px;margin-bottom:28px">Drei Schritte. <span>Der erste ist ein Termin.</span></h2>
+   <h2 style="margin-top:20px;margin-bottom:28px">In drei Schritten zum Start.</h2>
    <div class="hsteps">
-    <div class="hstep glass"><span class="n">1</span><div><h3>Bewerben</h3><p>Termin wählen und vier kurze Fragen beantworten. Damit ist das Gespräch ab der ersten Minute konkret.</p></div></div>
+    <div class="hstep glass"><span class="n">1</span><div><h3>Bewerben</h3><p>Termin wählen und ein paar kurze Fragen beantworten. So kann ich mich auf dein Gespräch vorbereiten.</p></div></div>
     <div class="hstep glass"><span class="n">2</span><div><h3>Erstgespräch, 30 Minuten, kostenlos</h3><p>Wir schauen auf deine Woche, dein Training, deine Gewohnheiten und dein Ziel. Danach entscheiden wir beide, ob es passt.</p></div></div>
     <div class="hstep glass"><span class="n">3</span><div><h3>Start</h3><p>Startgespräch, Ziel mit Datum, dein erster Plan.</p></div></div>
    </div>
@@ -537,17 +580,17 @@ footer a{margin-right:22px;text-decoration:none}
 
 <section>
  <div class="wrap">
-  <div class="head"><span class="label">Für wen</span><h2>Passt das zu dir? <span>Ehrlich vorab.</span></h2></div>
+  <div class="head"><span class="label">Für wen</span><h2>Passt das zu dir?</h2></div>
   <div class="pains">
-   <div class="pain glass"><h3>Gebaut für dich, wenn</h3><p>du schon trainiert hast und ein konkretes Ziel hast, das du allein nicht erreichst.</p><p>dein Kalender voll ist: Arbeit, Reisen, Schichten, Familie. Und du trotzdem Ergebnisse erwartest.</p><p>du einen klaren Blick von außen willst, nicht noch mehr Inhalte zum Sortieren.</p></div>
-   <div class="pain glass"><h3>Nicht gebaut für</h3><p>Einsteiger, die ihre erste Routine suchen.</p><p>alle, die einen Plan ohne Kontakt wollen. Der Austausch ist der Punkt.</p><p>alle, die Motivation kaufen wollen. Die verkaufe ich nicht.</p></div>
+   <div class="pain glass"><h3>Passt, wenn</h3><p>du schon trainiert hast und ein konkretes Ziel hast, das du allein nicht erreichst.</p><p>dein Kalender voll ist: Arbeit, Reisen, Schichten, Familie. Und du trotzdem Ergebnisse erwartest.</p><p>du einen klaren Blick von außen willst, nicht noch mehr Inhalte zum Sortieren.</p></div>
+   <div class="pain glass"><h3>Passt nicht für</h3><p>Einsteiger, die ihre erste Routine suchen.</p><p>alle, die einen Plan ohne Kontakt wollen. Wir arbeiten im direkten Austausch.</p><p>alle, die vor allem Motivation suchen.</p></div>
   </div>
  </div>
 </section>
 
 <section class="navy">
  <div class="wrap">
-  <div class="head center"><span class="label">Fragen</span><h2>Kurz beantwortet.</h2></div>
+  <div class="head center"><span class="label">Fragen</span><h2>Häufige Fragen.</h2></div>
   <div class="faq">
    <details><summary>Für wen ist das?</summary><p>Für Erwachsene mit Job und Verantwortung, die abnehmen und fitter werden wollen und bereit sind, zwölf Wochen konsequent mitzuarbeiten. Für reine Motivation oder einen Gratisplan ist es nicht gedacht.</p></details>
    <details><summary>Mein Kalender ist voll. Reicht das?</summary><p>Genau dafür ist es gebaut. Wie viele Einheiten du brauchst, klären wir im Startgespräch. Der Plan richtet sich nach deinem echten Kalender, nicht umgekehrt.</p></details>
@@ -565,8 +608,8 @@ footer a{margin-right:22px;text-decoration:none}
  <div class="wrap">
   <div class="head center">
    <span class="label">Bewerbung</span>
-   <h2>Dreißig Minuten. <span>Dann weißt du es.</span></h2>
-   <p class="lead">Wähle einen Termin und beantworte vier kurze Fragen. Das Erstgespräch ist kostenlos.</p>
+   <h2>Erstgespräch buchen. <span>30 Minuten, kostenlos.</span></h2>
+   <p class="lead">Wähle einen Termin, der in deine Woche passt.</p>
   </div>
   <div class="cal" id="cal">
    <div class="calconsent">
