@@ -1,0 +1,199 @@
+/* ==========================================================================
+   VOLTR · Designschicht im Stil der Bewerbungs-Landingpage (20.10.2026)
+   Wird nach site.css geladen. Ändert nur das Aussehen, keine Inhalte.
+   Grundlage: landingpage/v4 (Navy, Outfit, Space Mono, Rosé, Pill-Buttons, Glas-Karten)
+   ========================================================================== */
+@font-face{font-family:'Outfit';font-weight:300;font-display:swap;src:url(fonts/outfit-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-weight:400;font-display:swap;src:url(fonts/outfit-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-weight:500;font-display:swap;src:url(fonts/outfit-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-weight:600;font-display:swap;src:url(fonts/outfit-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Space Mono';font-weight:400;font-display:swap;src:url(fonts/space-mono-latin-400-normal.woff2) format('woff2')}
+
+:root{
+  --bg:#06080c;--navy:#0c121b;--navy2:#131d2c;
+  --glass:rgba(255,255,255,.05);--glass2:rgba(255,255,255,.08);
+  --stroke:rgba(255,255,255,.12);--stroke2:rgba(255,255,255,.22);
+  --text:#f5f3f2;--soft:#c6cad1;--dim:#a9aeb8;--dimmer:#6f7580;
+  --rose:#e6c3bb;--rose-soft:rgba(230,195,187,.12);--cta:#f3ebe8;
+  --rr:22px;
+  /* bestehende Tokens auf das dunkle System umgelegt */
+  --ink:#0c121b;--ink2:#131d2c;--char:#1a2433;--line-d:rgba(255,255,255,.12);
+  --paper:#06080c;--paper2:#0c121b;--stone:#2a3342;--line:rgba(255,255,255,.12);
+  --mute:#a9aeb8;--mute-d:#a9aeb8;
+  --sans:'Outfit',system-ui,-apple-system,sans-serif;
+  --serif:'Outfit',system-ui,-apple-system,sans-serif;
+  --wm:'Outfit',sans-serif;
+  --mono:'Space Mono',ui-monospace,monospace;
+}
+html,body{background:var(--bg)}
+body{color:var(--text);font-weight:300}
+::selection{background:var(--rose);color:#16110f}
+
+/* ---------- Flächen: durchgehend dunkel wie die Landingpage, ohne eingerückte Karten ---------- */
+section,.grey,.dark{background:var(--bg);color:var(--text)}
+.grey{background:linear-gradient(180deg,var(--bg),var(--navy) 25%,var(--navy2))}
+.dark{background:linear-gradient(180deg,var(--navy2),var(--navy) 60%,var(--bg))}
+.dark,.grey{margin:0!important;border-radius:0!important}
+section.dark+section,section.grey+section,section+section.dark,section+section.grey{margin-top:0!important}
+.vid-sec{background:var(--bg)}
+.grid-bg,.dark.grid-bg{--gl:rgba(255,255,255,.035)}
+footer{margin:0!important;border-radius:0!important;background:var(--bg);border-top:1px solid var(--stroke);color:var(--dim)}
+
+/* ---------- Typografie ---------- */
+h1,h2,h3,.display,.h2,.h3{font-family:var(--sans);font-weight:600;letter-spacing:-.025em;color:var(--text)}
+.display{letter-spacing:-.03em}
+.display em,.h2 em,.h3 em,.dark .display em,.dark .h2 em,.dark .h3 em,.hero .display em,.punch em,.promise p em{font-style:normal;font-weight:300;color:var(--soft)}
+.lede,.dark .lede,.hero .lede{color:var(--dim)}
+.small{color:var(--dim)}
+.mono,.micro,.dark .micro{font-family:var(--mono)}
+.eyebrow,.dark .eyebrow{font-family:var(--mono);color:var(--rose)}
+.eyebrow:before{background:var(--rose);opacity:.7}
+.eyebrow .n,.dark .eyebrow .n{color:var(--text)}
+.punch,.sig,.sign,.quote p,.promise p,.diag p,.step h3,.plan h3,.faq summary,.pf-quote p{color:var(--text)}
+p{color:inherit}
+.about p,.legal p,.legal li,.pstrip p,.plan p,.pcard p,.pcardx p,.steps3 p,.faq details p,.dark .faq details p,.step p,.terms,.fa p,.incl li,.book li,.case-rows p{color:var(--dim)}
+.legal h1,.legal h2{color:var(--text)}
+a{color:inherit}
+[style*="color:var(--ink)"]{color:var(--text)!important}
+[style*="color:#ACACAC"],[style*="color:#D6D6D6"]{color:var(--dim)!important}
+
+/* ---------- Buttons: Pill wie auf der Landingpage ---------- */
+.btn,.btn.light{font-family:var(--sans);font-weight:500;font-size:16px;letter-spacing:0;text-transform:none;padding:17px 32px;border-radius:999px;background:var(--cta);color:#0a0c10;border:1px solid var(--cta);transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn:hover,.btn.light:hover{background:var(--cta);color:#0a0c10;transform:translateY(-1px);box-shadow:0 10px 40px -8px rgba(230,195,187,.45)}
+.btn.ghost,.btn.ghost.l{background:transparent;color:var(--text);border:1px solid var(--stroke2)}
+.btn.ghost:hover,.btn.ghost.l:hover{background:var(--glass2);color:var(--text);border-color:var(--rose);box-shadow:none}
+.navcta{padding:10px 20px!important;font-size:14px!important;letter-spacing:0!important;text-transform:none!important}
+.mcta .btn{box-shadow:0 10px 30px rgba(0,0,0,.45)}
+
+/* ---------- Ankündigung, Navigation ---------- */
+.announce{background:var(--navy);color:var(--dim);font-family:var(--mono);border-bottom:1px solid var(--stroke)}
+.announce a{color:var(--rose);border-bottom-color:rgba(230,195,187,.5)}
+nav.top{left:0!important;right:0!important;top:0!important;color:var(--text)}
+nav.top.fixed{background:rgba(10,14,22,.6)!important;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid var(--stroke);color:var(--text)}
+nav.top .navcta,nav.top.onvideo .navcta,nav.top.fixed .navcta{background:var(--cta);color:#0a0c10;border-color:var(--cta)}
+.wordmark{font-family:var(--sans);font-weight:600;letter-spacing:.3em}
+.wordmark small{font-family:var(--mono);font-weight:400;letter-spacing:.14em;font-size:10px;opacity:.8}
+.navlinks{font-family:var(--sans);font-weight:400;font-size:14px;letter-spacing:.02em;text-transform:none}
+.burger{font-family:var(--mono);color:var(--text)}
+.mnav.open{background:var(--bg)!important;color:var(--text)!important}
+.mnav a{font-family:var(--sans);font-weight:600}
+
+/* ---------- Hero ---------- */
+.hero{margin:0!important;border-radius:0!important;min-height:100svh;background:var(--bg)}
+.hero .shade{background:radial-gradient(55% 65% at 15% 60%,rgba(230,195,187,.06),transparent 70%),linear-gradient(180deg,rgba(6,8,12,.55) 0%,rgba(6,8,12,.1) 30%,rgba(6,8,12,.35) 62%,rgba(6,8,12,.94) 100%)}
+.heroside{border-left-color:var(--stroke2)}
+.heroside .mono,.herometa{color:var(--dim)}
+.herometa{border-top-color:var(--stroke)}
+.heroside p{color:var(--soft)}
+
+/* ---------- Laufband ---------- */
+.marquee{background:var(--navy);border-color:var(--stroke)}
+.marquee span{color:var(--text);font-weight:300}
+.marquee i{color:var(--rose)}
+
+/* ---------- Linien ---------- */
+.diag,.diag div,.quotes,.quote+.quote,.steps,.step,.incl li,.plan ul,.plan li,.fit,.fit>div+div,.fit .row,.faq details,.faq details:first-child,.book ol,.book li,.fgrid,.plinks,.plinks a,.case-rows,.case-rows div,.inside,.inside li,.steps3 div,.reel-list,.reel-list li,.cmpx,.cx-row,.cmpz,.cz-row,.vs-col li,.offer,.offer>div+div,.promise,.fa,.fa>div+div,.bundle,.bundle>div+div,.tgrid,.plans{border-color:var(--stroke)!important}
+.tgrid,.plans{background:var(--stroke)}
+
+/* ---------- Karten: Glas, abgerundet ---------- */
+.pcard,.pcardx,.vs-col,.pf-quote,.cmp,.deliver,.dl a,.weekgrid div,.sample,.vs-m,.plan,.tframe,.quotes.rail .quote,.quotes.rail .quote+.quote,.quotes.four.rail .quote{background:var(--glass);border:1px solid var(--stroke);color:var(--text);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.pcard,.pcardx,.cmp,.sample,.vs-m,.pf-quote,.pf,.cc-track,.film,.reel-stage,.weekcard,.gal .main,.about .stack img,.calwrap{border-radius:var(--rr)}
+.deliver,.dl a{border-radius:16px}
+.pcard:hover,.pcardx:hover{box-shadow:0 22px 50px -10px rgba(0,0,0,.6);border-color:var(--stroke2)}
+.pcard .ico{background:var(--rose-soft);color:var(--rose);border:1px solid rgba(230,195,187,.35)}
+.pcardx .img{background:var(--navy)}
+.pcardx .row span{color:var(--rose)}
+.dl a:hover{border-color:var(--rose)}
+.dl .ft{background:var(--rose-soft);color:var(--rose);border:1px solid rgba(230,195,187,.3)}
+.dl small,.cc-count,.pcount{color:var(--dim)}
+.gal .thumbs button{background:var(--glass);border:1px solid var(--stroke);border-radius:12px}
+.gal .thumbs button.on,.gal .thumbs button:hover{border-color:var(--rose)}
+.sample:after{background:linear-gradient(transparent,var(--navy) 85%)}
+.buy .meta span{border-color:var(--stroke);color:var(--soft)}
+.buy .priceline small{color:var(--dim)}
+.crumbs,.crumbs a{color:var(--dim)}.crumbs a:hover{color:var(--rose)}
+
+/* Hervorgehobene Elemente (früher schwarz auf hell) im Rosé-Stil der Landingpage */
+.vs-main,.cmp .v,.cx-row>.cx-v,.cz-row>.cz-v,.vm-row .v,.weekgrid div.on,.pf-stat,.tframe .empty,.tframe.photo,.tframe.photo .ptext{background:linear-gradient(180deg,rgba(230,195,187,.12),rgba(255,255,255,.04));border-color:rgba(230,195,187,.4);color:var(--text)}
+.vs-main{border:1px solid rgba(230,195,187,.4);box-shadow:0 30px 70px -20px rgba(0,0,0,.7)}
+.vs-main h3{font-family:var(--sans);letter-spacing:.12em}
+.vs-main h3 small,.pf-stat .mono,.tframe .empty .mono,.tframe.photo .ptext .mono,.weekgrid div.on b{color:var(--rose)}
+.vs-main li{color:var(--text);border-color:var(--stroke)}
+.vs-col h3,.vs-col li{color:var(--dim)}
+.ci.yes,.vm-row .v .ci.yes{background:var(--rose);color:#16110f}
+.ci.no{border-color:var(--dimmer);color:var(--dimmer)}
+.ci.mid{border-color:var(--dim);background:linear-gradient(90deg,var(--dim) 50%,transparent 50%)}
+.cmp .yes:before{background:var(--rose)}
+.cz-row>.cz-l,.bundle .price{color:var(--text)}
+.cz-row>span,.cx-row>span{color:var(--dim)}
+.cz-head>.cz-v,.cx-head>.cx-v,.cmp-row.head .v,.vm-head>span.v{color:var(--rose)}
+.price small,.bundle .price small{color:var(--dim)}
+.wc-head .tag{background:var(--rose);color:#16110f}
+.weekcard{background:var(--glass);border:1px solid var(--stroke);background-image:none}
+.wc-row{border-top-color:var(--stroke)}
+.wc-note{background:var(--glass2)}
+.msg.in{background:var(--glass2);color:var(--soft)}
+.msg.out{background:var(--cta);color:#0a0c10}
+
+/* Navigationspfeile der Slider */
+.pnav button,.cc-nav button,.vid-sec .pnav button{background:var(--glass);color:var(--text);border:1px solid var(--stroke)}
+.pnav button:hover,.cc-nav button:hover,.vid-sec .pnav button:hover{background:var(--cta);color:#0a0c10;border-color:var(--cta)}
+
+/* Medien */
+.places-sec .places,.places.rail{background:var(--bg)!important}
+.film{border-radius:var(--rr)}
+.film .pbtn{background:var(--cta)}
+.film .pbtn:after{border-left-color:#0a0c10}
+.reel-list button{color:var(--dimmer)}
+.reel-list li.on button,.reel-list button:hover{color:var(--text)}
+.reel-list li.on .ix{color:var(--rose)}
+.reel-bar i{background:var(--rose)}
+
+/* FAQ */
+.faq summary:after{color:var(--rose)}
+
+/* Buchung */
+.calwrap{background:#fff}
+
+/* Footer */
+.fgrid h4{font-family:var(--mono);color:var(--rose)}
+.fgrid a{color:var(--soft)}
+.fgrid a:hover{color:var(--text)}
+.fbig{font-family:var(--sans);font-weight:600;letter-spacing:.3em;color:var(--text);opacity:.9}
+.fbase{color:var(--dimmer)}
+
+/* Programme-Leiste unten */
+.plinks b{color:var(--text)}
+.plinks span{color:var(--rose)}
+
+/* ---------- Mobil ---------- */
+@media(max-width:980px){
+  .dark,.grey{margin:0!important;border-radius:0!important}
+  .hero{margin:0!important;border-radius:0!important}
+  nav.top{left:0!important;right:0!important;top:0!important}
+  footer{margin:0!important;border-radius:0!important}
+}
+@media(max-width:700px){
+  .hero{background:var(--bg);color:var(--text);margin:0!important}
+  .hero video,.hero .poster{border-radius:0 0 var(--rr) var(--rr);background:var(--navy)}
+  .hero .eyebrow{color:var(--rose)!important}
+  .hero .display em{color:var(--soft)}
+  .hero .lede{color:var(--dim)}
+  .hero .btn.light{background:var(--cta);color:#0a0c10;border-color:var(--cta)}
+  .herometa{border-top-color:var(--stroke);color:var(--dim)}
+  .dark,.grey{margin:0!important;border-radius:0!important}
+  .reel-list button{border-color:var(--stroke);color:var(--dim)}
+  .reel-list li.on button{background:var(--cta);color:#0a0c10;border-color:var(--cta)}
+  .vs-m{background:var(--glass)}
+  .vm-row{border-top-color:var(--stroke)}
+  .vm-head>span{color:var(--dim)}
+  .vm-txt em{color:var(--dim)}
+}
+
+/* Korrekturen nach Sichtprüfung */
+.vs-col:not(.vs-main),.pf-quote,.revs-sec .pf-quote{background:var(--glass)!important;border-color:var(--stroke)!important}
+.vs-col:not(.vs-main) li{color:var(--dim)}
+/* Galerie mit App-Ansichten (dunkel): Thumbnails oben ausrichten, Leseprobe ohne weiße Fläche */
+.gal .main{background:#151515}
+.gal .main img{object-fit:contain;object-position:center}
+.sample{background:#151515}

@@ -1,5 +1,8 @@
+// Kauf über Relay Athletic (Entscheidung Lukas 20.10.2026). Relay bietet keinen Link je Programm,
+// deshalb führen alle Buttons zum Preisbereich der VOLTR-Seite bei Relay.
+// Frühere Stripe-Zahlungslinks: siehe Git-Historie dieser Datei.
 window.VOLTR_CHECKOUT={
-  "athletic-strength":"https://buy.stripe.com/cNi00j8qW0KCbyI6Et5EY06",
-  "hybrid":"https://buy.stripe.com/7sYbJ17mSdxo0U45Ap5EY07",
-  "3-day-minimum":"https://buy.stripe.com/dRmbJ17mS2SK8mwbYN5EY08"
+  "athletic-strength":"https://www.relayathletic.com/en/c/voltr#plans",
+  "hybrid":"https://www.relayathletic.com/en/c/voltr#plans",
+  "3-day-minimum":"https://www.relayathletic.com/en/c/voltr#plans"
 };
