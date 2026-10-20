@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bewerbung · VOLTR Coaching mit Lukas Plassnig</title>
+<meta name="description" content="1:1 Online-Coaching für Erwachsene mit Job und Verantwortung, die abnehmen wollen. Training und Gewohnheiten um deinen echten Kalender, ein messbares Ziel mit Datum, jede Woche eine Entscheidung.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#06080c">
+<link rel="preload" as="image" href="img/hero.jpg">
+<style>
+@font-face{font-family:'Outfit';font-weight:300;font-display:swap;src:url(fonts/outfit-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-weight:400;font-display:swap;src:url(fonts/outfit-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-weight:500;font-display:swap;src:url(fonts/outfit-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-weight:600;font-display:swap;src:url(fonts/outfit-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Space Mono';font-weight:400;font-display:swap;src:url(fonts/space-mono-latin-400-normal.woff2) format('woff2')}
+
+:root{
+ --bg:#06080c;--navy:#0c121b;--navy2:#131d2c;
+ --glass:rgba(255,255,255,.05);--stroke:rgba(255,255,255,.12);--stroke2:rgba(255,255,255,.22);
+ --text:#f5f3f2;--dim:#a9aeb8;--dimmer:#6f7580;
+ --rose:#e6c3bb;--rose-soft:rgba(230,195,187,.12);--cta:#f3ebe8;
+ --max:1180px;--r:22px
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Outfit',system-ui,sans-serif;font-weight:300;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.label{display:inline-block;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose)}
+h1,h2,h3{font-weight:600;letter-spacing:-.025em}
+h1{font-size:clamp(42px,5.6vw,80px);line-height:1.02}
+h2{font-size:clamp(32px,4.4vw,58px);line-height:1.06;max-width:880px}
+h1 span,h2 span{font-weight:300;color:#c6cad1}
+h3{font-size:20px;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:clamp(17px,1.5vw,19px);color:var(--dim);max-width:620px}
+section{padding:120px 0;position:relative}
+.head{margin-bottom:52px}
+.head .label{margin-bottom:20px}
+.head .lead{margin-top:20px}
+.center{text-align:center}.center h2,.center .lead{margin-left:auto;margin-right:auto}
+.glass{background:var(--glass);border:1px solid var(--stroke);border-radius:var(--r);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.navy{background:linear-gradient(180deg,var(--bg),var(--navy) 25%,var(--navy2))}
+.navy-rev{background:linear-gradient(180deg,var(--navy2),var(--navy) 60%,var(--bg))}
+/* blurred photo backgrounds */
+.blurbg{overflow:hidden}
+.blurbg>.bg{position:absolute;inset:-40px;background-size:cover;background-position:center;filter:blur(6px) saturate(.9);transform:scale(1.05)}
+.blurbg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,8,12,.9),rgba(10,15,24,.72) 30%,rgba(10,15,24,.78) 70%,rgba(6,8,12,.95))}
+.blurbg>.wrap{position:relative;z-index:2}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--cta);color:#0a0c10;text-decoration:none;font-family:'Outfit',sans-serif;font-weight:500;font-size:17px;padding:19px 38px;border-radius:999px;border:1px solid var(--cta);transition:transform .2s,box-shadow .2s;cursor:pointer}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 40px -8px rgba(230,195,187,.45)}
+.btn i{font-style:normal;transition:transform .2s}.btn:hover i{transform:translateX(3px)}
+.cta-row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:44px}
+.center .cta-row{justify-content:center}
+.micro{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--dim)}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(10,14,22,.6);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--stroke)}
+.nav-in{display:flex;justify-content:space-between;align-items:center;height:68px}
+.wordmark{font-weight:600;letter-spacing:.3em;font-size:15px;text-decoration:none}
+.nav-cta{font-weight:500;font-size:14px;text-decoration:none;background:var(--cta);color:#0a0c10;padding:10px 22px;border-radius:999px}
+
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:0}
+.hero-img{position:absolute;top:0;bottom:0;right:0;left:40%;background:#000 url('img/hero.jpg') 50% 26%/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(55% 65% at 15% 50%,rgba(230,195,187,.06),transparent 70%),linear-gradient(90deg,var(--bg) 0%,var(--bg) 42%,rgba(6,8,12,.55) 54%,rgba(6,8,12,0) 74%),linear-gradient(180deg,rgba(6,8,12,.45) 0%,rgba(6,8,12,0) 18%,rgba(6,8,12,0) 75%,var(--bg) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:80px}
+.hero .label{margin-bottom:20px}
+.hero h1{max-width:640px}
+.hero .lead{margin-top:22px;max-width:540px;color:#c8ccd3}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.chip{display:inline-flex;align-items:center;gap:9px;padding:9px 15px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--stroke);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:14px;color:#dfe2e7}
+.chip b{font-weight:500;color:#fff}
+.chip:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose)}
+
+/* proof strip */
+.pstrip{padding:56px 0 64px;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);background:var(--navy)}
+.pstrip-in{display:grid;grid-template-columns:220px repeat(3,1fr);gap:16px;align-items:center}
+.pstrip h3{font-size:22px}
+.pstrip p{color:var(--dim);font-size:14px;margin-top:6px}
+.pmini{padding:8px 8px 12px}
+.pmini .tpair figure{border-radius:10px}
+.pmini .cap{display:flex;justify-content:space-between;margin:10px 4px 0;font-size:14px}
+.pmini .cap b{font-weight:600}
+.pmini .cap span{color:var(--dim);font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding-top:3px}
+
+/* pairs */
+.tpair{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.tpair figure{position:relative;overflow:hidden;border-radius:14px;background:#111}
+.tpair img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.tpair figcaption{position:absolute;left:8px;bottom:8px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:rgba(8,10,14,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:5px 10px;border-radius:999px}
+.tpair figure:last-child figcaption{background:rgba(230,195,187,.92);color:#16110f}
+
+/* week */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.day{padding:22px 18px 24px;min-height:180px}
+.day .d{display:block;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--dimmer);margin-bottom:14px}
+.day p{font-size:15px;color:#dde0e5;line-height:1.45}
+.day.hl{border-color:rgba(230,195,187,.4);background:linear-gradient(180deg,rgba(230,195,187,.1),rgba(255,255,255,.04))}
+.day.hl .d{color:var(--rose)}
+.after-week{margin-top:36px;font-size:clamp(22px,2.4vw,30px);font-weight:300;color:#e6e3e2;max-width:820px;letter-spacing:-.01em}
+.after-week b{font-weight:600}
+.pains-head{margin:80px 0 26px}
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pain{padding:26px 28px}
+.pain p{font-size:16px;color:var(--dim);margin-top:8px}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split-img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;position:relative}
+.split-img img{width:100%;height:100%;object-fit:cover}
+.reasons{list-style:none;margin-top:34px;border-top:1px solid var(--stroke)}
+.reasons li{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--stroke)}
+.reasons .n{font-weight:600;font-size:15px;color:var(--rose);padding-top:2px}
+.reasons p{color:var(--dim);font-size:16px;margin-top:6px}
+.verdict{margin-top:34px;font-size:clamp(24px,2.6vw,34px);font-weight:600;line-height:1.2;letter-spacing:-.02em}
+.verdict span{font-weight:300;color:var(--rose)}
+
+/* results */
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tcard{padding:12px 12px 26px}
+.tcard .big{font-weight:600;font-size:44px;letter-spacing:-.03em;line-height:1;margin:24px 10px 6px}
+.tcard .who{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:0 10px 12px}
+.tcard p{color:var(--dim);font-size:15px;margin:0 10px}
+
+/* system */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{padding:28px 24px 30px}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid rgba(230,195,187,.45);color:var(--rose);font-weight:500;font-size:14px;margin-bottom:24px;background:var(--rose-soft)}
+.step p{color:#c3c7ce;font-size:15.5px;margin-top:10px}
+.nutri{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;margin-top:14px;overflow:hidden}
+.nutri-txt{padding:44px 44px}
+.nutri-txt p{color:#c3c7ce;font-size:17px;margin-top:14px;max-width:520px}
+.compare{margin-top:14px;overflow:hidden}
+.compare table{width:100%;border-collapse:collapse}
+.compare th,.compare td{padding:18px 26px;text-align:left;border-bottom:1px solid var(--stroke);font-size:16px;vertical-align:top}
+.compare tr:last-child td{border-bottom:0}
+.compare th{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;color:var(--dimmer)}
+.compare th.v{color:var(--rose)}
+.compare td:first-child{color:var(--dimmer);width:24%}
+.compare td:nth-child(2){color:var(--dim);width:34%}
+.compare td.v{color:#fff;background:rgba(230,195,187,.05)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:300px 300px;gap:12px}
+.gallery figure{position:relative;border-radius:var(--r);overflow:hidden}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery figure:hover img{transform:scale(1.03)}
+.gallery .g1{grid-row:1/3}
+.gallery figcaption{position:absolute;left:14px;bottom:14px}
+
+/* quote band */
+.band .wrap{display:grid;grid-template-columns:1.35fr .65fr;gap:56px;align-items:center}
+.band q{display:block;font-weight:400;font-size:clamp(24px,2.8vw,38px);line-height:1.3;letter-spacing:-.015em;quotes:"\201C" "\201D"}
+.band .who{margin-top:22px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose)}
+.band .tpair{max-width:340px}
+.quotes2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:48px;grid-column:1/-1}
+.quotes2 .glass{padding:24px 26px}
+.quotes2 q{font-size:17px;line-height:1.5;color:#e4e6ea}
+.quotes2 .who{margin-top:14px;font-size:10px}
+
+/* coach */
+.coach p{color:var(--dim);font-size:18px;margin-top:18px;max-width:540px}
+.coach p strong{color:#fff;font-weight:500}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.split-img .chip{position:absolute;left:16px;bottom:16px}
+
+/* offer */
+.offer{display:grid;grid-template-columns:1.25fr .75fr;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.035));border:1px solid var(--stroke2);border-radius:28px;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.offer-l{padding:42px 44px 34px;border-right:1px solid var(--stroke)}
+.offer-l h3{font-size:34px;letter-spacing:-.025em}
+.offer-l .sub{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-top:8px}
+.items{list-style:none;margin-top:26px}
+.items li{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:15px 0;border-top:1px solid var(--stroke);font-size:16px;color:#eceef1;font-weight:400}
+.items li span{color:var(--rose);font-size:13px;font-weight:500;padding-top:2px}
+.items li small{display:block;color:var(--dim);font-size:14.5px;margin-top:3px;font-weight:300}
+.offer-r{padding:42px 36px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:rgba(0,0,0,.2)}
+.amt{font-weight:600;font-size:76px;line-height:1;letter-spacing:-.04em;margin-top:14px}
+.amt small{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--dim);margin-left:8px;text-transform:uppercase;font-weight:400}
+.terms{list-style:none;margin-top:18px}
+.terms li{padding:11px 0;border-bottom:1px solid var(--stroke);color:#d9dce2;font-size:15px;display:flex;justify-content:space-between;gap:12px}
+.terms li span{color:var(--dim)}
+.offer-r .btn{width:100%}
+.guarantee{margin-top:14px;padding:26px 32px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;border-color:rgba(230,195,187,.32);background:linear-gradient(120deg,rgba(230,195,187,.1),rgba(255,255,255,.03))}
+.seal{width:72px;height:72px;border-radius:50%;border:1px solid rgba(230,195,187,.55);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);line-height:1.4}
+.guarantee p{font-size:17px;color:#e8eaee}
+.guarantee p b{font-weight:500}
+.not{margin-top:14px;padding:20px 32px;display:flex;gap:10px 26px;flex-wrap:wrap;align-items:center;color:var(--dim);font-size:15px}
+.not .label{color:var(--dimmer)}
+.not .x:before{content:"×";margin-right:8px;color:var(--dimmer)}
+
+/* start steps */
+.hsteps{display:grid;gap:12px;margin-top:8px}
+.hstep{padding:24px 26px;display:grid;grid-template-columns:44px 1fr;gap:16px}
+.hstep .n{font-weight:600;font-size:28px;line-height:1;color:var(--rose)}
+.hstep p{color:var(--dim);font-size:15.5px;margin-top:6px}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+details{border-bottom:1px solid var(--stroke);padding:22px 0}
+details:first-of-type{border-top:1px solid var(--stroke)}
+summary{font-size:18px;font-weight:400;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--rose);font-weight:300;font-size:24px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--dim);margin-top:12px;max-width:760px;font-size:16.5px}
+
+/* booking */
+.mini-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 auto 48px;max-width:900px}
+.mini-proof .glass{padding:8px 8px 12px}
+.mini-proof .who{display:block;text-align:center;margin-top:10px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.cal{background:#fff;border-radius:28px;min-height:720px;overflow:hidden;max-width:980px;margin:0 auto}
+.calconsent{color:#0a0c10;padding:64px 32px;text-align:center}
+.calconsent h3{font-size:28px;margin-bottom:10px}
+.calconsent p{color:#555;max-width:520px;margin:0 auto 28px}
+.calconsent .btn{background:#0a0c10;color:#fff;border-color:#0a0c10}
+.calconsent .micro{color:#777}.calconsent .micro a{color:#555}
+.trust{display:none;justify-content:center;margin-top:40px}
+.trust.on{display:flex}
+
+footer{padding:44px 0 140px;font-size:14px;color:var(--dimmer);border-top:1px solid var(--stroke)}
+footer a{margin-right:22px;text-decoration:none}
+.sticky{position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:40;transform:translateY(140%);transition:transform .3s}
+.sticky.on{transform:none}
+.sticky .btn{width:100%;box-shadow:0 12px 36px rgba(0,0,0,.6)}
+.consent{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:rgba(18,24,34,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--stroke2);border-radius:18px;padding:20px;max-width:560px;display:none}
+.consent p{font-size:14px;color:var(--dim);margin-bottom:14px}
+.consent .row{display:flex;gap:10px;flex-wrap:wrap}
+.consent button{font:inherit;font-size:14px;font-weight:500;padding:11px 18px;border-radius:999px;border:1px solid var(--stroke2);background:transparent;color:var(--text);cursor:pointer}
+.consent button.ok{background:var(--cta);color:#0a0c10;border-color:var(--cta)}
+
+@media(max-width:1000px){
+ .week{grid-template-columns:repeat(4,1fr)}
+ .steps{grid-template-columns:1fr 1fr}
+ .pstrip-in{grid-template-columns:repeat(3,1fr)}
+ .pstrip-txt{grid-column:1/-1}
+}
+@media(max-width:900px){
+ section{padding:84px 0}
+ .head{margin-bottom:36px}
+ h1{font-size:40px}
+ .hero{display:block;min-height:0}
+ .hero-img{position:relative;left:auto;height:54vh;height:54svh;background-position:42% 18%}
+ .hero:after{background:linear-gradient(180deg,rgba(6,8,12,.55) 0%,rgba(6,8,12,0) 14%,rgba(6,8,12,0) 32%,rgba(6,8,12,.9) 48%,var(--bg) 56%)}
+ .hero .wrap{margin-top:-110px;padding-top:0;padding-bottom:52px}
+ .pstrip{padding:40px 0}
+ .pstrip-in{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;scroll-padding:0 24px}
+ .pstrip-txt{flex:0 0 100%;display:none}
+ .pmini{flex:0 0 76%;scroll-snap-align:center}
+ .week{grid-template-columns:1fr;gap:8px}
+ .day{min-height:0;display:flex;gap:16px;padding:15px 18px;align-items:baseline}
+ .day .d{margin:0;min-width:28px}
+ .pains,.results,.steps,.quotes2,.split,.band .wrap,.offer,.nutri{grid-template-columns:1fr}
+ .split{gap:36px}
+ .split-img{aspect-ratio:4/4.4}
+ .gallery{grid-template-columns:1fr 1fr;grid-template-rows:260px 200px 200px}
+ .gallery .g1{grid-row:auto;grid-column:1/-1}
+ .nutri-txt{padding:28px 22px}
+ .offer-l{padding:30px 22px 22px;border-right:0;border-bottom:1px solid var(--stroke)}
+ .offer-r{padding:30px 22px}
+ .guarantee{grid-template-columns:1fr;padding:24px 22px;gap:14px}
+ .not{padding:18px 22px}
+ .compare th,.compare td{padding:13px 12px;font-size:14px}
+ .compare td:first-child,.compare th:first-child{display:none}
+ .mini-proof{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:0 -24px 36px;padding:0 24px;max-width:none}
+ .mini-proof .glass{flex:0 0 76%;scroll-snap-align:center}
+ .btn{padding:18px 28px}
+ .band .wrap{gap:32px}
+}
+@media(min-width:900px){.sticky{display:none}}
+/* v4 */
+.wordmark{cursor:default}
+.nutri.solo{grid-template-columns:1fr}
+.nutri.solo .nutri-txt{padding:40px 44px}
+.pairs2{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:860px}
+.pairs2 .who{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:12px 6px 4px}
+.qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.qgrid .glass{padding:24px 26px}
+.qgrid q{font-size:17px;line-height:1.5;color:#e4e6ea;quotes:"\201C" "\201D"}
+.qgrid .who{margin-top:14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+.note{margin-top:18px;font-size:13px;color:var(--dimmer);max-width:760px}
+.health{max-width:980px;margin:22px auto 0;font-size:14px;color:var(--dim);text-align:center}
+.pains{grid-template-columns:repeat(2,1fr)}
+.case{margin-top:8px}
+.case-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;-webkit-overflow-scrolling:touch}
+.case-track figure{flex:0 0 min(420px,82%);scroll-snap-align:start;border-radius:16px;overflow:hidden;background:#0b0b0b;border:1px solid var(--stroke)}
+.case-track img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain}
+.case-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:6px}
+.case-bar button{font:inherit;font-size:20px;width:44px;height:44px;border-radius:50%;border:1px solid var(--stroke2);background:transparent;color:var(--text);cursor:pointer}
+.case-cap{font-size:13px;color:var(--dimmer);max-width:640px}
+.diptych{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-width:720px}
+.diptych figure{position:relative;border-radius:16px;overflow:hidden;background:#111}
+.diptych img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1)}
+.diptych figcaption{position:absolute;left:10px;bottom:10px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:rgba(8,10,14,.62);padding:5px 10px;border-radius:999px}
+.mirror{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.sub-h{margin:72px 0 22px}
+@media(max-width:900px){.mirror{grid-template-columns:1fr;gap:32px}.pairs2,.qgrid,.pains{grid-template-columns:1fr}.nutri.solo .nutri-txt{padding:28px 22px}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap nav-in"><span class="wordmark">VOLTR.</span><a class="nav-cta cta" data-pos="nav" href="#bewerbung">Jetzt bewerben</a></div></nav>
+
+<header class="hero">
+ <div class="hero-img" role="img" aria-label="Lukas Plassnig mit der Langhantel im Gym"></div>
+ <div class="wrap">
+  <span class="label">1:1 Coaching · online</span>
+  <h1 id="h1">Abnehmen scheitert selten am Wissen. <span>Sondern an der Woche, in der es passieren soll.</span></h1>
+  <p class="lead" id="sub">Für Erwachsene mit Job und Verantwortung, die abnehmen wollen und eigentlich wissen, was zu tun wäre. Training und Gewohnheiten um deinen echten Kalender, ein messbares Ziel mit Datum und jede Woche eine Entscheidung.</p>
+  <div class="cta-row">
+   <a class="btn cta" data-pos="hero" href="#bewerbung">Jetzt bewerben <i>→</i></a>
+   <span class="micro">Erstgespräch 30 Min, kostenlos · Coaching 250 € im Monat, mindestens 3 Monate</span>
+  </div>
+  <div class="chips">
+   <span class="chip"><b>100+</b> Menschen betreut</span>
+   <span class="chip">Staatlich geprüfter Trainer</span>
+   <span class="chip">Antwort in 24 bis 48 h</span>
+  </div>
+ </div>
+</header>
+
+<section id="woche" class="blurbg">
+ <div class="bg" style="background-image:url('img/bg-coach-stand.jpg')"></div>
+ <div class="wrap">
+  <div class="head">
+   <span class="label">Kommt dir das bekannt vor?</span>
+   <h2>Deine Woche, <span>wie sie wirklich läuft.</span></h2>
+  </div>
+  <div class="week">
+   <div class="day glass"><span class="d">MO</span><p>Die Woche ist durchgeplant. Training steht dreimal im Kalender. Diesmal soll es dort nicht nur stehen.</p></div>
+   <div class="day glass hl"><span class="d">DI</span><p>Der Termin um 17 Uhr dauert bis 19:30. Das Training rutscht auf morgen.</p></div>
+   <div class="day glass hl"><span class="d">MI</span><p>Morgen ist schon voll. Mittag am Schreibtisch, gegessen wird, was gerade da ist.</p></div>
+   <div class="day glass hl"><span class="d">DO</span><p>Kurzfristig unterwegs. Hotel, Kundentermin, Abendessen. Der Plan passt nicht mehr zur Woche.</p></div>
+   <div class="day glass"><span class="d">FR</span><p>Geschäftsessen. Die Woche gilt innerlich als gelaufen.</p></div>
+   <div class="day glass"><span class="d">SA</span><p>Alles nachholen. Zwei Einheiten an einem Tag, hoher Einsatz, wenig Erholung.</p></div>
+   <div class="day glass"><span class="d">SO</span><p>Die Waage zeigt dasselbe wie letzte Woche. Am Abend entsteht der nächste perfekte Plan.</p></div>
+  </div>
+  <p class="after-week"><b>Du triffst den ganzen Tag Entscheidungen.</b> Für dein eigenes Ziel bleibt das, was von der Woche übrig ist.</p>
+
+  <div class="pains-head"><span class="label">Wenn du dich hier wiederfindest, lies weiter</span></div>
+  <div class="pains">
+   <div class="pain glass"><h3>Die Waage steht seit Wochen</h3><p>Du isst weniger, trainierst mehr, und es bewegt sich nichts.</p></div>
+   <div class="pain glass"><h3>Diät bis Freitag</h3><p>Unter der Woche läuft es. Dann kommt ein Termin, ein Essen, ein Wochenende, und Montag fängst du neu an.</p></div>
+   <div class="pain glass"><h3>Der Kalender gewinnt</h3><p>Sobald die Woche voll wird, fallen Training und gute Gewohnheiten als Erstes weg.</p></div>
+   <div class="pain glass"><h3>Viel Wissen, keine Entscheidung</h3><p>Kalorien, Protein, Fasten. Du weißt viel, aber nicht, was davon für dich gerade zählt.</p></div>
+  </div>
+  <div class="cta-row"><a class="btn cta" data-pos="pains" href="#bewerbung">Ja, das bin ich <i>→</i></a></div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap split">
+  <div class="split-img"><img src="img/curl.jpg" alt="Lukas Plassnig beim Krafttraining" loading="lazy"></div>
+  <div>
+   <span class="label">Warum es bisher nicht funktioniert hat</span>
+   <h2 style="margin-top:20px">Am Willen hat es nie gelegen.</h2>
+   <ul class="reasons">
+    <li><span class="n">01</span><div><h3>Dein Plan rechnet mit einer Woche, die du nicht hast.</h3><p>Freie Abende, acht Stunden Schlaf, eine eigene Küche. Ein Termin, eine Reise, und er bricht.</p></div></li>
+    <li><span class="n">02</span><div><h3>Du machst zu viel vom Falschen.</h3><p>Härter trainieren, weniger essen, das nächste Programm. Der Aufwand steigt, die Waage geht nicht mit.</p></div></li>
+    <li><span class="n">03</span><div><h3>Niemand entscheidet.</h3><p>Wann anpassen, was weg kann, was bleibt. Du rätst jede Woche neu und weißt nach drei Monaten nicht, ob es funktioniert hat.</p></div></li>
+   </ul>
+   <p class="verdict">Kein Disziplinproblem. <span>Ein Entscheidungsproblem.</span></p>
+   <p style="margin-top:18px;color:var(--dim);font-size:17px;max-width:540px">Beruflich steuerst du genau durch solche Wochen. Dein Training ist nur noch nicht auf diese Realität ausgelegt.</p>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:40px">
+ <div class="wrap mirror">
+  <div class="diptych">
+   <figure><img src="img/privat/eigen-vorher.jpg" alt="Oberkörper, vorher" loading="lazy"><figcaption>Vorher</figcaption></figure>
+   <figure><img src="img/privat/eigen-nachher.jpg" alt="Oberkörper, nachher" loading="lazy"><figcaption>Nachher</figcaption></figure>
+  </div>
+  <div>
+   <span class="label">Der Unterschied</span>
+   <h2 style="margin-top:20px">Du brauchst keinen perfekten Plan für eine perfekte Woche. <span>Du brauchst ein System, das auch in einer normalen Woche funktioniert.</span></h2>
+  </div>
+ </div>
+</section>
+
+<section id="system" class="blurbg">
+ <div class="bg" style="background-image:url('img/bg-run-autumn.jpg')"></div>
+ <div class="wrap">
+  <div class="head">
+   <span class="label">So arbeiten wir</span>
+   <h2>Kein besserer Plan. <span>Ein Coaching, das sich deiner Woche anpasst.</span></h2>
+  </div>
+  <div class="steps">
+   <div class="step glass"><span class="n">1</span><h3>Wo du stehst</h3><p>Startgespräch: Ausgangslage, was dein Alltag zulässt, ein messbares Ziel mit Datum. Schriftlich.</p></div>
+   <div class="step glass"><span class="n">2</span><h3>Ein Plan für deine echte Woche</h3><p>Training für die Tage, die du wirklich hast. Reisen, Hotelgyms und späte Meetings werden eingeplant, sobald du sie kennst.</p></div>
+   <div class="step glass"><span class="n">3</span><h3>Jede Woche eine Entscheidung</h3><p>Du machst deinen Check-in, ich lese ihn und passe die nächste Woche an. Mit einer kurzen Notiz, was sich ändert und warum.</p></div>
+   <div class="step glass"><span class="n">4</span><h3>Ein Ziel, kein Gefühl</h3><p>Jede Anpassung richtet sich an deinem Ziel aus. Du weißt, worauf du hinarbeitest und bis wann.</p></div>
+  </div>
+    <div class="nutri solo glass">
+   <div class="nutri-txt">
+    <span class="label">Essen im Alltag</span>
+    <h3 style="font-size:28px;margin-top:14px;letter-spacing:-.02em">Keine Diät, die am ersten Termin scheitert.</h3>
+    <p>Keine Ernährungspläne und kein verpflichtendes Makro-Tracking. Wir helfen dir, alltagstaugliche Gewohnheiten zu strukturieren und an deine Woche anzupassen, auch wenn Reisen, Geschäftsessen oder lange Arbeitstage dazwischenkommen.</p>
+   </div>
+  </div>
+  <div class="compare glass">
+   <table>
+    <tr><th></th><th>Diät, Plan oder App</th><th class="v">VOLTR Coaching</th></tr>
+    <tr><td>Grundlage</td><td>Eine ideale Woche</td><td class="v">Deine echte Woche</td></tr>
+    <tr><td>Wenn etwas dazwischenkommt</td><td>Du fängst neu an</td><td class="v">Die nächste Woche wird angepasst</td></tr>
+    <tr><td>Essen im Alltag</td><td>Starrer Plan oder gar nichts</td><td class="v">Gewohnheiten, die zu deiner Woche passen</td></tr>
+    <tr><td>Wer entscheidet</td><td>Du, allein</td><td class="v">Ich, mit kurzer Begründung</td></tr>
+    <tr><td>Fortschritt</td><td>Gefühlt</td><td class="v">An einem messbaren Ziel mit Datum</td></tr>
+   </table>
+  </div>
+  <div class="cta-row"><a class="btn cta" data-pos="system" href="#bewerbung">Jetzt bewerben <i>→</i></a><span class="micro">Im Erstgespräch schauen wir auf deine echte Woche.</span></div>
+ </div>
+</section>
+
+<section id="belege" class="navy">
+ <div class="wrap">
+  <div class="head">
+   <span class="label">Vorher und nachher</span>
+   <h2>Echte Fotos. <span>Veröffentlicht mit Einverständnis.</span></h2>
+   <p class="lead">Kein Versprechen, sondern ein Blick darauf, wie Arbeit in normalen Wochen aussieht.</p>
+  </div>
+    <div class="case">
+   <div class="case-track" id="caseTrack" tabindex="0" aria-label="Fallbeispiel, neun Slides">
+    <figure><img src="img/privat/case/01.jpg" alt="Fallbeispiel, Slide 1 von 9" loading="lazy"></figure>
+    <figure><img src="img/privat/case/02.jpg" alt="Fallbeispiel, Slide 2 von 9" loading="lazy"></figure>
+    <figure><img src="img/privat/case/03.jpg" alt="Fallbeispiel, Slide 3 von 9" loading="lazy"></figure>
+    <figure><img src="img/privat/case/04.jpg" alt="Fallbeispiel, Slide 4 von 9" loading="lazy"></figure>
+    <figure><img src="img/privat/case/05.jpg" alt="Fallbeispiel, Slide 5 von 9" loading="lazy"></figure>
+    <figure><img src="img/privat/case/06.jpg" alt="Fallbeispiel, Slide 6 von 9" loading="lazy"></figure>
+    <figure><img src="img/privat/case/07.jpg" alt="Fallbeispiel, Slide 7 von 9" loading="lazy"></figure>
+    <figure><img src="img/privat/case/08.jpg" alt="Fallbeispiel, Slide 8 von 9" loading="lazy"></figure>
+    <figure><img src="img/privat/case/09.jpg" alt="Fallbeispiel, Slide 9 von 9" loading="lazy"></figure>
+   </div>
+   <div class="case-bar"><p class="case-cap">Anonymes Fallbeispiel aus meinem persönlichen Umfeld, veröffentlicht mit Einverständnis. Originalfolien, englisch. Ein Einzelfall: Im Coaching gibt es keine Ernährungspläne und kein verpflichtendes Makro-Tracking.</p><div style="display:flex;gap:8px;flex-shrink:0"><button type="button" id="casePrev" aria-label="Vorherige Slide">←</button><button type="button" id="caseNext" aria-label="Nächste Slide">→</button></div></div>
+  </div>
+  <div class="sub-h"><span class="label">Weitere Vorher/Nachher-Fotos</span></div>
+  <div class="pairs2">
+   <div class="glass" style="padding:10px 10px 12px">
+    <div class="tpair">
+     <figure><img src="img/kunden/kunde-1-vorher.jpg" alt="A., vorher" loading="lazy"><figcaption>Vorher</figcaption></figure>
+     <figure><img src="img/kunden/kunde-1-nachher.jpg" alt="A., nachher" loading="lazy"><figcaption>Nachher</figcaption></figure>
+    </div>
+    <div class="who">A.</div>
+   </div>
+      <div class="glass" style="padding:10px 10px 12px">
+    <div class="tpair">
+     <figure><img src="img/kunden/kunde-2-vorher.jpg" alt="S., vorher" loading="lazy"><figcaption>Vorher</figcaption></figure>
+     <figure><img src="img/kunden/kunde-2-nachher.jpg" alt="S., nachher" loading="lazy"><figcaption>Nachher</figcaption></figure>
+    </div>
+    <div class="who">S.</div>
+   </div>
+  </div>
+  <div class="qgrid">
+   <div class="glass"><q>For the first time my training has a clear structure. No more guessing. I know what I'm doing and why.</q><div class="who">Kundennachricht</div></div>
+   <div class="glass"><q>Three times a week, sixty minutes. It fits my life. Before, every plan wanted five or six sessions.</q><div class="who">Kundennachricht</div></div>
+   <div class="glass"><q>Had a moment on my break where it really hit me that I'm actually strong.</q><div class="who">Kundennachricht</div></div>
+  </div>
+  <p class="note">Kundennachrichten, teils aus dem Deutschen übersetzt. Ergebnisse sind individuell und hängen von Ausgangslage, Mitarbeit und Alltag ab.</p>
+  <div class="cta-row"><a class="btn cta" data-pos="proof" href="#bewerbung">Jetzt bewerben <i>→</i></a></div>
+ </div>
+</section>
+
+<section class="navy-rev">
+ <div class="wrap split coach">
+  <div>
+   <span class="label">Dein Coach</span>
+   <h2 style="margin-top:20px">Lukas Plassnig. <span>Ich entscheide mit dir, jede Woche.</span></h2>
+   <p>Ich bin staatlich geprüfter Trainer und coache seit drei Jahren professionell, über hundert Menschen bisher. Ich arbeite mit Menschen, deren Woche selten so läuft wie geplant.</p>
+   <p><strong>Mein Job ist nicht, dich zu motivieren.</strong> Mein Job ist, aus deinem Alltag den Plan zu machen, der funktioniert, und jede Woche zu entscheiden, was er braucht und was weg kann.</p>
+   <div class="facts"><span class="chip"><b>100+</b> Menschen betreut</span><span class="chip"><b>3</b> Jahre professionell</span><span class="chip">Antwort in 24 bis 48 h</span></div>
+  </div>
+  <div class="split-img"><img src="img/coach-stand.jpg" alt="Lukas Plassnig im Gym" loading="lazy"><span class="chip">Vienna · New York · Remote</span></div>
+ </div>
+</section>
+
+<section id="angebot" class="blurbg">
+ <div class="bg" style="background-image:url('img/bg-run-field.jpg')"></div>
+ <div class="wrap">
+  <div class="head center">
+   <span class="label">Das Angebot</span>
+   <h2>Zwölf Wochen. <span>Ein Ziel. Jede Woche eine Entscheidung.</span></h2>
+  </div>
+  <div class="offer">
+   <div class="offer-l">
+    <h3>VOLTR Coaching</h3>
+    <div class="sub">1:1 · online · mindestens 3 Monate</div>
+    <ul class="items">
+     <li><span>01</span><div>Startgespräch mit messbarem Ziel und Datum<small>Schriftlich festgehalten. Daran richtet sich alles Weitere aus.</small></div></li>
+     <li><span>02</span><div>Trainingsplan für deinen echten Kalender<small>Für dich geschrieben und neu geschrieben, wenn sich deine Wochen ändern.</small></div></li>
+     <li><span>03</span><div>Gewohnheiten statt Ernährungsplan<small>Alltagstaugliche Gewohnheiten, strukturiert und an deine Woche angepasst. Kein verpflichtendes Makro-Tracking.</small></div></li>
+     <li><span>04</span><div>Wöchentlicher Check-in mit schriftlicher Begründung<small>Was sich in der nächsten Woche ändert und warum.</small></div></li>
+     <li><span>05</span><div>Direkter Draht zu mir<small>Fragen gehen direkt an mich, Antwort innerhalb von 24 bis 48 Stunden.</small></div></li>
+     <li><span>06</span><div>Alles auf einer Coaching-Plattform<small>Einheiten, Lasten und Fortschritt an einem Ort, für dich und für mich.</small></div></li>
+    </ul>
+   </div>
+   <div class="offer-r">
+    <div>
+     <span class="label">Investition</span>
+     <div class="amt">250 €<small>pro Monat</small></div>
+     <ul class="terms">
+      <li>Laufzeit<span>mindestens 3 Monate</span></li>
+      <li>Gesamt im ersten Block<span>750 €</span></li>
+      <li>Zahlung<span>monatlich</span></li>
+      <li>Probemonat<span>keiner</span></li>
+     </ul>
+    </div>
+    <a class="btn cta" data-pos="offer" href="#bewerbung">Jetzt bewerben <i>→</i></a>
+   </div>
+  </div>
+    <div class="guarantee glass">
+   <div class="seal">VOLTR<br>Zusage</div>
+   <p><b>Ziel mit Datum, schriftlich.</b> Machst du über alle zwölf Wochen deine Check-ins und wir erreichen das Ziel nicht, verlängere ich dein Coaching einmalig um bis zu vier Wochen. Ohne Kosten. Eine Geld-zurück-Garantie gibt es nicht.</p>
+  </div>
+  <div class="not glass"><span class="label">Nicht enthalten</span><span class="x">Ernährungspläne</span><span class="x">Pflicht-Makro-Tracking</span><span class="x">Dauerverfügbarkeit</span><span class="x">Gratisphase</span><span class="x">Crash-Diäten</span></div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap split">
+  <div class="split-img"><img src="img/track-dsc03208.jpg" alt="Lukas Plassnig auf der Laufbahn" loading="lazy"></div>
+  <div>
+   <span class="label">So startest du</span>
+   <h2 style="margin-top:20px;margin-bottom:28px">Drei Schritte. <span>Der erste ist ein Termin.</span></h2>
+   <div class="hsteps">
+    <div class="hstep glass"><span class="n">1</span><div><h3>Bewerben</h3><p>Termin wählen und vier kurze Fragen beantworten. Damit ist das Gespräch ab der ersten Minute konkret.</p></div></div>
+    <div class="hstep glass"><span class="n">2</span><div><h3>Erstgespräch, 30 Minuten, kostenlos</h3><p>Wir schauen auf deine Woche, dein Training, deine Gewohnheiten und dein Ziel. Danach entscheiden wir beide, ob es passt.</p></div></div>
+    <div class="hstep glass"><span class="n">3</span><div><h3>Start</h3><p>Startgespräch, Ziel mit Datum, dein erster Plan.</p></div></div>
+   </div>
+   <div class="cta-row"><a class="btn cta" data-pos="steps" href="#bewerbung">Jetzt bewerben <i>→</i></a></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="head"><span class="label">Für wen</span><h2>Passt das zu dir? <span>Ehrlich vorab.</span></h2></div>
+  <div class="pains">
+   <div class="pain glass"><h3>Gebaut für dich, wenn</h3><p>du schon trainiert hast und ein konkretes Ziel hast, das du allein nicht erreichst.</p><p>dein Kalender voll ist: Arbeit, Reisen, Schichten, Familie. Und du trotzdem Ergebnisse erwartest.</p><p>du einen klaren Blick von außen willst, nicht noch mehr Inhalte zum Sortieren.</p></div>
+   <div class="pain glass"><h3>Nicht gebaut für</h3><p>Einsteiger, die ihre erste Routine suchen.</p><p>alle, die einen Plan ohne Kontakt wollen. Der Austausch ist der Punkt.</p><p>alle, die Motivation kaufen wollen. Die verkaufe ich nicht.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="navy">
+ <div class="wrap">
+  <div class="head center"><span class="label">Fragen</span><h2>Kurz beantwortet.</h2></div>
+  <div class="faq">
+   <details><summary>Für wen ist das?</summary><p>Für Erwachsene mit Job und Verantwortung, die abnehmen und fitter werden wollen und bereit sind, zwölf Wochen konsequent mitzuarbeiten. Für reine Motivation oder einen Gratisplan ist es nicht gedacht.</p></details>
+   <details><summary>Mein Kalender ist voll. Reicht das?</summary><p>Genau dafür ist es gebaut. Wie viele Einheiten du brauchst, klären wir im Startgespräch. Der Plan richtet sich nach deinem echten Kalender, nicht umgekehrt.</p></details>
+      <details><summary>Bekomme ich einen Ernährungsplan?</summary><p>Nein. Keine Ernährungspläne und kein verpflichtendes Makro-Tracking. Wir helfen dir, alltagstaugliche Gewohnheiten zu strukturieren und an deine Woche anzupassen, auch wenn Reisen, Geschäftsessen oder lange Arbeitstage dazwischenkommen.</p></details>
+   <details><summary>Was, wenn ich beruflich reise?</summary><p>Dann wird die Woche angepasst. Reisen und Hotelgyms sind eingeplant, nicht das Ende des Plans.</p></details>
+   <details><summary>Läuft das online?</summary><p>Ja. Du trainierst in deinem Gym oder im Hotel. Plan und Check-ins laufen über die Coaching-Plattform, Fragen gehen direkt an mich.</p></details>
+   <details><summary>Warum mindestens drei Monate?</summary><p>Zwölf Wochen sind das kürzeste ehrliche Fenster für ein messbares Ergebnis. Deshalb gibt es keinen Probemonat.</p></details>
+   <details><summary>Wie funktioniert die Zusage?</summary><p>Am Anfang steht ein Ziel mit Datum. Wenn du über alle zwölf Wochen deine Check-ins machst und wir es trotzdem nicht erreichen, verlängere ich dein Coaching einmalig um bis zu vier Wochen, ohne Kosten.</p></details>
+      <details><summary>Was, wenn ich gesundheitliche Einschränkungen habe?</summary><p>Das Coaching ersetzt keine ärztliche Diagnose oder Behandlung. Wenn du gesundheitliche Einschränkungen hast oder medizinisch begleitet wirst, besprich dein Vorhaben bitte mit deiner Ärztin oder deinem Arzt und sag es mir im Erstgespräch.</p></details>
+  </div>
+ </div>
+</section>
+
+<section id="bewerbung" class="navy-rev">
+ <div class="wrap">
+  <div class="head center">
+   <span class="label">Bewerbung</span>
+   <h2>Dreißig Minuten. <span>Dann weißt du es.</span></h2>
+   <p class="lead">Wähle einen Termin und beantworte vier kurze Fragen. Das Erstgespräch ist kostenlos.</p>
+  </div>
+  <div class="cal" id="cal">
+   <div class="calconsent">
+    <h3>Termin für dein Erstgespräch</h3>
+        <p>Die Terminbuchung läuft über Calendly (Calendly LLC, USA). Beim Laden werden Daten an Calendly übertragen, auch in die USA. <a href="datenschutz.html" style="color:#555">Datenschutz</a></p>
+    <button class="btn cta" data-pos="cal-load" id="loadcal">Freie Termine anzeigen · 30 Min, kostenlos</button>
+    <div class="micro" style="margin-top:18px"><a id="calfallback" href="#" target="_blank" rel="noopener">Oder direkt bei Calendly öffnen</a></div>
+   </div>
+  </div>
+  <p class="health">Coaching: 250 € im Monat, mindestens 3 Monate. Das Coaching ersetzt keine ärztliche Diagnose oder Behandlung.</p>
+ </div>
+</section>
+
+<footer><div class="wrap"><a href="/impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="/terms.html">AGB</a><a href="#" id="c-open">Cookie-Einstellungen</a><span>© 2026 Lukas Plassnig e.U.</span></div></footer>
+
+<div class="sticky" id="sticky"><a class="btn cta" data-pos="sticky" href="#bewerbung">Jetzt bewerben <i>→</i></a></div>
+
+<div class="consent" id="consent">
+ <p>Ich würde gern das Meta-Pixel nutzen, um zu messen, welche Anzeigen zu gebuchten Erstgesprächen führen. Dabei werden Daten an Meta übertragen, auch in die USA. Es wird nur geladen, wenn du zustimmst, und du kannst die Zustimmung jederzeit über „Cookie-Einstellungen“ ändern. <a href="datenschutz.html">Datenschutz</a></p>
+ <div class="row"><button id="c-yes">Zustimmen</button><button id="c-no">Ablehnen</button></div>
+</div>
+<script>
+(function(){
+ var PIXEL='865727659692251';
+ var CAL='https://calendly.com/training-voltr/erstgesprach-bewerbung';
+ var KEY='voltr_consent';
+ var qs=new URLSearchParams(location.search);
+
+ var HOOKS={
+  'struktur':['Mehr Training war nie das Problem. <span>Dein Plan kennt deine Woche nicht.</span>','Späte Meetings, Reisen, Geschäftsessen: eingeplant statt Ausrede. VOLTR Coaching baut Training und Gewohnheiten um deinen echten Kalender, mit einem messbaren Ziel und jede Woche einer Entscheidung.'],
+  'warum':['Funktionieren ist nicht dasselbe wie Bestform. <span>Bestform heißt, es langfristig zu können.</span>','Für Unternehmer, Selbstständige und Führungskräfte, die schon trainieren und abnehmen wollen: Training und Gewohnheiten, die zu deiner echten Woche passen, ohne auszubrennen.'],
+  'intensitaet':['Du brauchst nicht mehr Intensität. <span>Du brauchst Struktur, die zu deinem Alltag passt.</span>','Für Menschen, die im Job auf hohem Niveau funktionieren müssen und abnehmen wollen. VOLTR Coaching baut Training und Gewohnheiten um deinen Kalender, jede Woche angepasst.'],
+  'woche':['Dreimal Training pro Woche reicht. <span>Wenn der Plan deine echte Woche kennt.</span>','Training steht dreimal im Kalender, am Freitag warst du einmal dort. Nicht, weil du nicht willst. Dein Plan rechnet mit einer Woche, die du nicht hast. VOLTR Coaching baut Training und Gewohnheiten um deine echte Woche und passt sie jede Woche an.'],
+  'entscheider':['Du triffst den ganzen Tag Entscheidungen. <span>Für dein eigenes Training trifft sie niemand.</span>','Für Unternehmer, Selbstständige und Führungskräfte, die schon trainieren und abnehmen wollen. Kein Plan für die perfekte Woche, sondern jede Woche eine klare Entscheidung.'],
+  'jahresende':['Vor dem Jänner starten. <span>Nicht im Jänner wieder bei null.</span>','Statt im Jänner wieder bei null anzufangen: jetzt eine Struktur, die zu deiner echten Woche passt. Training und Gewohnheiten, jede Woche angepasst.'],
+  '3einheiten':['Abnehmen mit vollem Kalender. <span>Mit den Einheiten, die du wirklich schaffst.</span>','Nicht mehr Training, sondern das richtige für deine Woche, und Gewohnheiten, die auch volle Tage aushalten. Um deinen echten Kalender gebaut, jede Woche angepasst.'],
+  'verantwortung':['Viel Verantwortung im Job. <span>Und trotzdem in Form.</span>','Für Unternehmer, Selbstständige und Führungskräfte, die abnehmen wollen. Training und Gewohnheiten, die zu deinen Terminen passen, statt dagegen zu arbeiten.'],
+  'kalender':['Dein Kalender isst mit. <span>Dein Plan sollte das wissen.</span>','Späte Meetings, Reisen, Geschäftsessen. Ein Plan, der das nicht einrechnet, bricht in der ersten vollen Woche. VOLTR Coaching baut Training und Gewohnheiten um deine echte Woche.']
+ };
+ var hk=(qs.get('utm_content')||qs.get('h')||'').toLowerCase();
+ if(!HOOKS.hasOwnProperty(hk))hk='';
+ if(hk){document.getElementById('h1').innerHTML=HOOKS[hk][0];document.getElementById('sub').textContent=HOOKS[hk][1];}
+
+ function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+ function set(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+ var consent=get();
+ function track(type,name,data){
+  if(!PIXEL||consent!=='yes'||!window.fbq)return;
+  data=data||{}; if(hk)data.hook=hk;
+  fbq(type,name,data);
+ }
+ function loadPixel(){
+  if(!PIXEL||window.fbq)return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('set','autoConfig',false,PIXEL); // keine automatische Erfassung von Klicks und Seiten-Metadaten
+  fbq('init',PIXEL); fbq('track','PageView');
+ }
+ var box=document.getElementById('consent');
+ if(!PIXEL){box.style.display='none'}
+ else if(consent==='yes'){loadPixel()}
+ else if(consent!=='no'){box.style.display='block'}
+ document.getElementById('c-yes').onclick=function(){consent='yes';set('yes');box.style.display='none';loadPixel();onScroll()};
+ document.getElementById('c-no').onclick=function(){consent='no';set('no');if(window.fbq){fbq('consent','revoke')}box.style.display='none';onScroll()};
+ if(!PIXEL){document.getElementById('c-open').style.display='none'}
+ document.getElementById('c-open').onclick=function(e){e.preventDefault();if(PIXEL){box.style.display='block'}};
+
+ var utm=new URLSearchParams();
+ ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){if(qs.get(k))utm.set(k,qs.get(k))});
+ if(!utm.get('utm_source'))utm.set('utm_source','voltr-bewerbung');
+ var calUrl=CAL+'?hide_gdpr_banner=1&'+utm.toString();
+ document.getElementById('calfallback').href=calUrl;
+
+ document.querySelectorAll('.cta').forEach(function(el){
+  el.addEventListener('click',function(){ track('trackCustom','CTA_Click',{position:el.getAttribute('data-pos')}); });
+ });
+ document.getElementById('calfallback').addEventListener('click',function(){ track('trackCustom','CalendarOpened',{via:'link'}); });
+
+ var nav=document.getElementById('nav'), st=document.getElementById('sticky'), book=document.getElementById('bewerbung');
+ function onScroll(){
+  var y=window.scrollY, h=window.innerHeight;
+  nav.classList.toggle('solid',y>40);
+  var bt=book.getBoundingClientRect().top;
+  st.classList.toggle('on',window.innerWidth<900 && y>h*0.8 && bt>h*0.6 && box.style.display!=='block');
+ }
+ window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+ var seen=false; var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!seen){seen=true;track('track','ViewContent',{content_name:'VOLTR Coaching Angebot'})}})},{threshold:.3});
+ io.observe(document.getElementById('angebot'));
+
+ var ct=document.getElementById('caseTrack');
+ function step(d){var f=ct.querySelector('figure');ct.scrollBy({left:d*(f?f.getBoundingClientRect().width+12:300),behavior:'smooth'})}
+ document.getElementById('casePrev').onclick=function(){step(-1)};
+ document.getElementById('caseNext').onclick=function(){step(1)};
+
+ var calLoaded=false;
+ function loadCal(){
+  if(calLoaded)return; calLoaded=true;
+  var host=document.getElementById('cal'); host.innerHTML='';
+  var d=document.createElement('div'); d.className='calendly-inline-widget'; d.setAttribute('data-url',calUrl); d.style.cssText='min-width:320px;height:760px'; host.appendChild(d);
+  var s=document.createElement('script'); s.src='https://assets.calendly.com/assets/external/widget.js'; s.async=true; document.body.appendChild(s);
+  track('trackCustom','CalendarOpened',{via:'embed'});
+ }
+ document.getElementById('loadcal').onclick=loadCal;
+
+ var scheduled=false;
+ window.addEventListener('message',function(e){
+  if(e.origin!=='https://calendly.com')return;
+  if(!e.data||typeof e.data.event!=='string'||e.data.event.indexOf('calendly.')!==0)return;
+  if(e.data.event==='calendly.date_and_time_selected')track('trackCustom','DateSelected',{});
+  if(e.data.event==='calendly.event_scheduled'&&!scheduled){scheduled=true;track('track','Schedule',{content_name:'Erstgespräch gebucht'})}
+ });
+})();
+</script>
+</body>
+</html>
